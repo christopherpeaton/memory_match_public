@@ -1,0 +1,30 @@
+#game_area {
+    height: 100%;
+    width: 1000px;
+    perspective:1000px;
+}
+#card{
+    height: 200px;
+    width: 150px;
+    position:relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display:inline-block;
+}
+#card:hover, #game_area.hover #card {
+    transform:rotateY(180deg);
+}
+.card_front_face .card_back_face {
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+.card_front_face {
+    z-index: 2;
+    transform: rotateY(180deg);
+    position:absolute;
+}
+.card_back_face {
+    transform: rotateY(0deg);
+    position:absolute;
+}
