@@ -1,9 +1,15 @@
-#game_area {
+body {
+    background-image: url("photos/nurburgring.jpg");
+    repeat: no-repeat;
+    background-size: cover;
+}
+.game-area {
     height: 100%;
     width: 1000px;
     perspective:1000px;
+    display:inline-block;
 }
-#card{
+.card{
     height: 200px;
     width: 150px;
     position:relative;
@@ -11,41 +17,57 @@
     transform-style: preserve-3d;
     display:inline-block;
 }
-#card:hover, #game_area.hover #card {
+.card:hover, .game_area.hover .card {
     transform:rotateY(180deg);
 }
-.card_front_face .card_back_face {
+.front .back {
     -webkit-backface-visibility: hidden;
     top: 0;
     left: 0;
 }
-.card_front_face {
+.front {
     z-index: 2;
     transform: rotateY(180deg);
     position:absolute;
 }
-.card_back_face {
+.back {
     transform: rotateY(0deg);
     position:absolute;
 }
 #header {
     height: 200px;
     width: 100%;
-    background-color: #008AC9;
+
     display:inline-block;
-}
-#menu a {
-    font-size: 30px;
-    color: #8CA3B1;
-    text-align: center;
-}
-#menu p {
-    color: #F5F6FC;
-    font-size: 50px;
-    text-align: center;
 }
 #logo {
     width: 200px;
     height: 200px;
-    top: 15px;
+    margin-top: 18px;
+    float: left;
+}
+#menu {
+    text-align: center;
+}
+#menu a {
+    font-size: 30px;
+    color: #8CA3B1;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+#menu p {
+    color: #F5F6FC;
+    font-size: 50px;
+}
+#info {
+    height: 30vh;
+    background-color: aliceblue;
+    opacity: .5;
+    width: 20%;
+    display: inline-block;
+    vertical-align:top;
+    font-size: 22px;
+}
+.reset {
+    font-size: 22px;
 }
