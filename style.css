@@ -29,10 +29,13 @@ body {
     z-index: 2;
     transform: rotateY(180deg);
     position:absolute;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 .back {
-    transform: rotateY(0deg);
     position:absolute;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 #header {
     height: 200px;
