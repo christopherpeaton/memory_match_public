@@ -3,41 +3,9 @@ body {
     repeat: no-repeat;
     background-size: cover;
 }
-.game-area {
-    height: 100%;
-    width: 1000px;
-    perspective:1000px;
-    display:inline-block;
-}
-.card{
-    height: 200px;
-    width: 150px;
-    position:relative;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    display:inline-block;
-}
-.card:hover, .game_area.hover .card {
-    transform:rotateY(180deg);
-}
-.front .back {
-    -webkit-backface-visibility: hidden;
-    top: 0;
-    left: 0;
-}
-.front {
-    z-index: 2;
-    transform: rotateY(180deg);
-    position:absolute;
-}
-.back {
-    transform: rotateY(0deg);
-    position:absolute;
-}
 #header {
     height: 200px;
     width: 100%;
-
     display:inline-block;
 }
 #logo {
@@ -70,4 +38,45 @@ body {
 }
 .reset {
     font-size: 22px;
+}
+.game-area {
+    height: 100%;
+    width: 65vw;
+    perspective:1000px;
+    display:inline-block;
+}
+.card {
+    height: 200px;
+    width: 150px;
+    position:relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display:inline-block;
+}
+/*.card.click.flipped, .game_area.click.flipped .card {
+    transform:rotateY(180deg);
+}*/
+.front .back {
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+.front {
+    z-index: 2;
+    transform: rotateY(180deg);
+    position:absolute;
+    border-radius: 100px;
+}
+.back {
+    position:absolute;
+    border-radius: 100px;
+}
+img {
+    border:none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.card.flipped {
+    transform: rotateY(180deg);
 }
