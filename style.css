@@ -45,13 +45,11 @@ body {
     perspective:1000px;
     display:inline-block;
 }
-.card {
+.card, .front, .back {
     height: 200px;
     width: 150px;
-    position:relative;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
     display:inline-block;
+    position:absolute;
 }
 /*.card.click.flipped, .game_area.click.flipped .card {
     transform:rotateY(180deg);
@@ -63,13 +61,13 @@ body {
 }
 .front {
     z-index: 2;
-    transform: rotateY(180deg);
     position:absolute;
     border-radius: 100px;
 }
 .back {
     position:absolute;
     border-radius: 100px;
+    /*transform: rotateY(180deg);*/
 }
 img {
     border:none;
@@ -77,6 +75,11 @@ img {
     -moz-border-radius: 20px;
     border-radius: 20px;
 }
-.card.flipped {
-    transform: rotateY(180deg);
+.card {
+    /*transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position:relative;*/
+}
+.flipped {
+    /*transform:rotateY(180deg);*/
 }

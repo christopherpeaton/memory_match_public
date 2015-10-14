@@ -1,3 +1,3 @@
-function flip() {
-    $('.card').toggleClass('flipped');
-}
+$(".card").click(funtion(){
+    $(this).toggleClass("rotator") ;
+})
