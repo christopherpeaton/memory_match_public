@@ -20,17 +20,17 @@ body {
 .card:hover, .game_area.hover .card {
     /* transform:rotateY(180deg);*/
 }
-.front .back {
+.card_front .card_back {
     -webkit-backface-visibility: hidden;
     top: 0;
     left: 0;
 }
-.front {
+.card_front {
     /*z-index: 2;*/
     transform: rotateY(180deg);
     position: absolute;
 }
-.back {
+.card_back {
     position:absolute;
 }
 #header {
@@ -67,7 +67,7 @@ body {
     vertical-align:top;
     font-size: 22px;
 }
-.reset {
+.button_reset {
     font-size: 22px;
 }
 img {

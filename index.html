@@ -9,6 +9,7 @@
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+    <script src="main.js"></script>
 
 </head>
 <body>
@@ -37,47 +38,47 @@
         <div class="label">Accuracy</div>
         <div class="value"></div>
     </div><br>
-    <button type="button" class="reset btn-lg">Reset Game</button>
+    <button type="button" class="button_reset btn-lg">Reset Game</button>
 </div>
 <!-- Game Area ----------------------------------------------------------- -->
 <div id="game-area">
-    <div class="card">
-        <div class="front">
+    <div class="card" onclick="card_clicked(this)">
+        <div class="card_front">
             <img src="photos/56-f100-truck-DSC-0037.jpg" alt="f100"  height="200px"; width="150px";>
         </div>
-        <div class="back">
+        <div class="card_back">
             <img src="photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg" alt="cardback" height="200px"; width="150px";>
         </div>
     </div>
-    <div class="card">
-        <div class="front">
+    <div class="card" onclick="card_clicked(this)">
+        <div class="card_front">
             <img src="photos/56-f100-truck-DSC-0037.jpg" alt="f100"  height="200px"; width="150px";>
         </div>
-        <div class="back">
+        <div class="card_back">
             <img src="photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg" alt="cardback" height="200px"; width="150px";>
         </div>
     </div>
-    <div class="card">
-        <div class="front">
+    <div class="card" onclick="card_clicked(this)">
+        <div class="card_front">
             <img src="photos/2015-Porsche-918-Spyder.jpg" alt="918"  height="200px"; width="150px";>
         </div>
-        <div class="back">
+        <div class="card_back">
             <img src="photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg" alt="cardback" height="200px"; width="150px";>
         </div>
     </div>
-    <div class="card">
-        <div class="front">
+    <div class="card" onclick="card_clicked(this)">
+        <div class="card_front">
             <img src="photos/2015-Porsche-918-Spyder.jpg" alt="918"  height="200px"; width="150px";>
         </div>
-        <div class="back">
+        <div class="card_back">
             <img src="photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg" alt="cardback" height="200px"; width="150px";>
         </div>
     </div>
-    <div class="card">
+    <!-- <div class="card">
         <div class="front">
             <img src="photos/ae86_levin_hatch_by_bramdc.jpg" alt="ae86"  height="200px"; width="150px";>
         </div>
-        <div class="backe">
+        <div class="back">
             <img src="photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg" alt="cardback" height="200px"; width="150px";>
         </div>
     </div>
@@ -184,7 +185,7 @@
         <div class="back">
             <img src="photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg" alt="cardback" height="200px"; width="150px";>
         </div>
-    </div>
+    </div> -->
 </div>
 
 </body>
