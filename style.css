@@ -6,7 +6,7 @@ body {
 #game-area {
     height: 100%;
     width: 1000px;
-    perspective:1000px;
+    /*perspective:1000px;*/
     display:inline-block;
 }
 .card{
@@ -14,20 +14,20 @@ body {
     width: 150px;
     position:relative;
     /*transition: transform 0.6s;*/
-    transform-style: preserve-3d;
+    /*transform-style: preserve-3d;*/
     display:inline-block;
 }
 .card:hover, .game_area.hover .card {
     /* transform:rotateY(180deg);*/
 }
 .card_front .card_back {
-    -webkit-backface-visibility: hidden;
+    /*-webkit-backface-visibility: hidden;*/
     top: 0;
     left: 0;
 }
 .card_front {
     /*z-index: 2;*/
-    transform: rotateY(180deg);
+    /*transform: rotateY(180deg);*/
     position: absolute;
 }
 .card_back {
@@ -36,7 +36,6 @@ body {
 #header {
     height: 200px;
     width: 100%;
-
     display:inline-block;
 }
 #logo {

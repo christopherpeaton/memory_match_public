@@ -1,3 +1,4 @@
+
 var first_card_clicked = null;
 var second_card_clicked = null;
 var total_possible_matches = 2;
@@ -5,6 +6,7 @@ var match_counter = 0;
 
 
 function card_clicked(card) {
+    console.log("card:", card);
     var img_src = $(card).prev().find("img").attr("src");
     //var card_front = $(img_src).find(".card_front img");
     console.log("card:", card);
@@ -21,16 +23,16 @@ function card_clicked(card) {
         second_card_clicked = img_src;
         console.log("second card clicked!");
         if (first_card_clicked == second_card_clicked) {
-            console.log('a match!');
             //if (first_card_clicked == second_card_clicked) {
-            //    match_counter += 1;
+            //    return match_counter += 1;
             //    console.log("add one to match counter");
-            //} else {
-            //    match_counter + 0;
             //}
+            $(".card_has_been_selected").removeClass("card_has_been_clicked").addClass("match");
+            console.log('a match!');
         } else {
-            console.log("they dont be matchin");
+            console.log("they dont match");
         }
+
     }
     if (match_counter == total_possible_matches) {
         alert("You've Won!");
