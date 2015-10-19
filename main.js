@@ -10,7 +10,7 @@ function card_clicked(card) {
     //var card_front = $(img_src).find(".card_front img");
     console.log("card:", card);
 
-    $(card).addClass("card_had_been_clicked").toggle();
+    $(card).hide();
     //console.log($(card_back).attr("src"));
     //var card_img = $(card_front).attr('src');
 
@@ -24,14 +24,16 @@ function card_clicked(card) {
         if (first_card_clicked == second_card_clicked) {
             match_counter += 1;
             console.log(match_counter);
-            $(".card_has_been_selected").toggleClass('match');
+            //$(".card_has_been_selected").toggleClass('match');
             console.log('a match!');
             first_card_clicked = null;
             second_card_clicked = null;
             if (match_counter == total_possible_matches) {
                 alert("You've Won!"); }
         } else {
-            $("#match").toggle().toggleClass("match");
+            $(".card_back").show("slow");
+            first_card_clicked = null;
+            second_card_clicked = null;
             console.log("they don't match");
 
             //setTimeout( function () {
@@ -42,5 +44,6 @@ function card_clicked(card) {
     }
 
 }
+
 
 
