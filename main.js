@@ -9,9 +9,9 @@ var games_played = 0;
 
 function card_clicked(card) {
     var img_src = $(card).prev().find("img").attr("src");
-    games_played += 1;
+    //games_played += 1;
     //var card_front = $(img_src).find(".card_front img");
-    console.log("card:", card);
+    //console.log("card:", card);
 
     $(card).hide();
     //console.log($(card_back).attr("src"));
@@ -27,34 +27,34 @@ function card_clicked(card) {
         attempts += 1;
         update_stats();
         console.log(attempts);
-        if (first_card_clicked == second_card_clicked) {
+        if (first_card_clicked === second_card_clicked) {
             match_counter += 1;
-            update_stats();
             //console.log(match_counter);
             $(".card_has_been_selected").toggleClass('match');
             console.log('a match!');
             first_card_clicked = null;
             second_card_clicked = null;
-            if (match_counter == total_possible_matches) {
-                alert("You've Won!"); }
+            if (match_counter === total_possible_matches) {
+                alert("You've Won!");
+                //games_played += 1;
         } else {
             $(".card_has_been_selected").show("slow");
-            first_card_clicked = null;
-            second_card_clicked = null;
+            //first_card_clicked = null;
+            //second_card_clicked = null;
             console.log("they don't match");
         }
     }
-    if (match_counter == total_possible_matches) {
-        games_played += 1;
-        update_stats;
-    }
+}
 }
 
 
-function reset_clicked(resetbutton) {
-    $(".button-reset").find(".card_back").show("slow");
+function reset_clicked(reset) {
+    $("#reset").find(".card_back").show("slow");
     first_card_clicked = null;
     second_card_clicked = null;
+    match_counter = 0;
+    games_played = 0;
+    attempts = 0;
     //$("#button_reset").click(function () {
     //    counter++;
     //    $(".games-played .value").text(games_played);
