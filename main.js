@@ -22,7 +22,8 @@ function card_clicked(card) {
         second_card_clicked = img_src;
         console.log("second card clicked!");
         attempts += 1;
-        console.log(attempts);
+        $(".attempts .value").text(attempts);
+        console.log("attempts", attempts);
         if (first_card_clicked === second_card_clicked) {
             match_counter += 1;
             console.log(match_counter);
@@ -45,7 +46,7 @@ function card_clicked(card) {
                 $(".card_has_been_selected").show();
             }, 2000);
         }
-        console.log("attempts", attempts);
+        //console.log("attempts", attempts);
         howAccurate();
     }
 }
