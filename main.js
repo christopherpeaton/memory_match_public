@@ -54,22 +54,21 @@ function howAccurate() {
     accuracy = match_counter / attempts + "%";
     $(".accuracy .label").text(accuracy);
 }
-
-function reset_clicked(reset) {
-    $("#reset").find(".card_back").show("slow");
-    first_card_clicked = null;
-    second_card_clicked = null;
-    match_counter = 0;
-    games_played = 0;
+function reset_stats () {
+    accuracy = 0;
+    matches = 0;
     attempts = 0;
-    //$("#button_reset").click(function () {
-    //    counter++;
-    //    $(".games-played .value").text(games_played);
+    display_stats();
 }
-
-
 function display_stats() {
     $(".games-played .value").text(games_played);
     $(".attempts .value").text(attempts);
     $(".accuracy .label").text(accuracy);
+}
+function reset_button(reset) {
+    reset_clicked = $(games_played)
+    games_played += 1;
+    reset_stats();
+    display_stats();
+    $(".card_has_been_selected").show();
 }
