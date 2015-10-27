@@ -3,75 +3,89 @@ body {
     repeat: no-repeat;
     background-size: cover;
 }
+
 #game-area {
     height: 100%;
     width: 1000px;
     /*perspective:1000px;*/
-    display:inline-block;
+    display: inline-block;
 }
-.card{
+
+.card {
     height: 200px;
     width: 150px;
-    position:relative;
+    position: relative;
     /*transition: transform 0.6s;*/
     /*transform-style: preserve-3d;*/
-    display:inline-block;
+    display: inline-block;
 }
+
 .card:hover, .game_area.hover .card {
     /* transform:rotateY(180deg);*/
 }
+
 .card_front .card_back {
     /*-webkit-backface-visibility: hidden;*/
     top: 0;
     left: 0;
 }
+
 .card_front {
     /*z-index: 2;*/
 
     /*transform: rotateY(180deg);*/
     position: absolute;
 }
+
 .card_back {
-    position:absolute;
+    position: absolute;
 }
+
 #header {
     height: 200px;
     width: 100%;
-    display:inline-block;
+    display: inline-block;
 }
+
 #logo {
     width: 200px;
     height: 200px;
     margin-top: 18px;
     float: left;
 }
+
 #menu {
     text-align: center;
 }
+
 #menu a {
     font-size: 30px;
     color: #8CA3B1;
     margin-left: 3%;
     margin-right: 3%;
 }
+
 #menu p {
     color: #F5F6FC;
     font-size: 50px;
 }
+
 #info {
     height: 50vh;
     background-color: aliceblue;
     opacity: .5;
     width: 20%;
     display: inline-block;
-    vertical-align:top;
+    vertical-align: top;
     font-size: 22px;
 }
+
 .button_reset {
     font-size: 22px;
 }
+
 img {
-    border:1px solid white;
+    border: 1px solid white;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;

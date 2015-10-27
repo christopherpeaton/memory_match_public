@@ -1,6 +1,6 @@
 var first_card_clicked = null;
 var second_card_clicked = null;
-var total_possible_matches = 2;
+var total_possible_matches = 9;
 var match_counter = 0;
 var attempts = 0;
 var games_played = 0;
@@ -8,13 +8,9 @@ var games_played = 0;
 
 function card_clicked(card) {
     var img_src = $(card).prev().find("img").attr("src");
-    //games_played += 1;
-    //var card_front = $(img_src).find(".card_front img");
-    //console.log("card:", card);
+
     $(card).hide().addClass("card_has_been_selected");
-    //console.log($(card_back).attr("src"));
-    //var card_img = $(card_front).attr('src');
-    //console.log('16');
+
     if (first_card_clicked == null) {
         console.log("first card clicked");
         first_card_clicked = img_src;
@@ -22,12 +18,11 @@ function card_clicked(card) {
         second_card_clicked = img_src;
         console.log("second card clicked!");
         attempts += 1;
-        //$(".attempts .value").text(attempts);
         console.log("attempts", attempts);
         if (first_card_clicked === second_card_clicked) {
             match_counter += 1;
             console.log(match_counter);
-            $(".matches .label").text(match_counter);
+            $(".matches .value").text(match_counter);
             $(".card_has_been_selected").toggleClass('match');
             console.log('a match!');
             first_card_clicked = null;
@@ -36,7 +31,7 @@ function card_clicked(card) {
             if (match_counter === total_possible_matches) {
                 alert("You've Won!");
                 games_played += 1;
-                //$(".games-played .value").text(games_played);
+                $(".card_has_been_selected").show();
             }
         } else {
             first_card_clicked = null;
@@ -46,29 +41,36 @@ function card_clicked(card) {
                 $(".card_has_been_selected").show();
             }, 2000);
         }
-        //console.log("attempts", attempts);
+        ;
         howAccurate();
     }
+    ;
 }
 function howAccurate() {
-    accuracy = match_counter / attempts + "%";
-    $(".accuracy .label").text(accuracy);
-}
-function reset_stats () {
+    accuracy = (match_counter / attempts) * 100 + "%";
+    if (accuracy == Infinity) {
+        $(".accuracy").find(".value").text(100 + "%");
+    } else {
+        $(".accuracy").find(".value").text(accuracy);
+    }
+    ;
+};
+function reset_stats() {
     accuracy = 0;
     matches = 0;
     attempts = 0;
-    display_stats();
-}
+};
 function display_stats() {
     $(".games-played .value").text(games_played);
     $(".attempts .value").text(attempts);
-    $(".accuracy .label").text(accuracy);
-}
-function reset_button(reset) {
-    reset_clicked = $(games_played)
-    games_played += 1;
+    $(".accuracy .value").text(accuracy);
+};
+function reset_clicked() {
+    $(".games-played > .value").text(++games_played)
+    console.log("games played add 1");
     reset_stats();
+    console.log("reset stats");
     display_stats();
+    console.log("display stats");
     $(".card_has_been_selected").show();
-}
+};
