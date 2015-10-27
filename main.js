@@ -5,6 +5,44 @@ var match_counter = 0;
 var attempts = 0;
 var games_played = 0;
 
+function card_back() {
+    var card_back = $("<div>", {
+        class: "card_back",
+        onclick: "card_clicked(this)",
+    });
+    var pic = $("<img>", {
+        src: "photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg",
+        alt: "cardback",
+        height: "200px",
+        width: "150px"
+    });
+}
+
+$('card_back').append(pic);
+$(".card").append(card_back)
+
+function card_front() {
+    var card_front = $("<div>", {
+        class: "card_front"
+    });
+    var pic = $("<img>", {
+        src: "photos/2015-Porsche-918-Spyder.jpg",
+        alt: "918",
+        height: "200px",
+        width: "150px"
+    });
+}
+$("card_front").append(pic);
+$(".card").append(card_front);
+
+//<div class="card_front">
+//    <img src="photos/2015-Porsche-918-Spyder.jpg" alt="918" height="200px" width="150px">
+//</div>
+
+//<div class="card_back" onclick="card_clicked(this)">
+//    <img src="photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg" alt="cardback" height="200px" ; width="150px" ;>
+//</div>
+
 
 function card_clicked(card) {
     var img_src = $(card).prev().find("img").attr("src");
