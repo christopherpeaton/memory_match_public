@@ -26,7 +26,7 @@ var erics_photo_array = ["photos/2015-Porsche-918-Spyder.jpg", "photos/56-f100-t
 function card_back() {
     var card_back = $("<div>", {
         class: "card_back",
-        onclick: "card_clicked(this)",
+        onclick: "card_clicked(this)"
     });
     var pic = $("<img>", {
         src: "photos/Design-Paper-Vine-pattern-Art-Nouveau.jpg",
@@ -87,10 +87,8 @@ function card_clicked(card) {
                 $(".card_has_been_selected").show();
             }, 2000);
         }
-        ;
         howAccurate();
     }
-    ;
 }
 function howAccurate() {
     accuracy = (match_counter / attempts) * 100 + "%";
@@ -99,24 +97,23 @@ function howAccurate() {
     } else {
         $(".accuracy").find(".value").text(accuracy);
     }
-    ;
-};
+}
 function reset_stats() {
     accuracy = 0;
     matches = 0;
     attempts = 0;
-};
+}
 function display_stats() {
     $(".games-played .value").text(games_played);
     $(".attempts .value").text(attempts);
     $(".accuracy .value").text(accuracy);
-};
+}
 function reset_clicked() {
-    $(".games-played > .value").text(++games_played)
+    $(".games-played > .value").text(++games_played);
     console.log("games played add 1");
     reset_stats();
     console.log("reset stats");
     display_stats();
     console.log("display stats");
     $(".card_has_been_selected").show();
-};
+}
