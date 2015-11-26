@@ -48,29 +48,22 @@ body {
     vertical-align: top;
     font-size: 22px;
 }
-.stats li{
-    color:white;
+
+.stats li {
+    color: white;
     list-style-type: none;
     background-color: black;
 }
 
-
-}
 .button_reset {
     font-size: 22px;
 }
+
 .tower {
     right: 0;
-    margin-top:-12%;
+    margin-top: -12%;
     position: absolute;
 }
-
-/*img {*/
-    /*border: 1px solid white;*/
-    /*-webkit-border-radius: 20px;*/
-    /*-moz-border-radius: 20px;*/
-    /*border-radius: 20px;*/
-/*}*/
 
 /** Game Area **/
 #game-area {
@@ -78,6 +71,13 @@ body {
     width: 1000px;
     perspective: 1000px;
     display: inline-block;
+}
+
+#game-area img {
+    border: 1px solid black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
 
 .card {
@@ -89,7 +89,7 @@ body {
     display: inline-block;
 }
 
-.card:hover, .game_area.hover .card {
+.card:active, .game_area.onclick .card {
     transform: rotateY(180deg);
 }
 
@@ -101,7 +101,6 @@ body {
 
 .card_front {
     z-index: 2;
-
     transform: rotateY(180deg);
     position: absolute;
 }
