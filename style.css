@@ -1,13 +1,82 @@
+/** Game Page css **/
 body {
     background-image: url("photos/nurburgring.jpg");
     repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
+/** Header **/
+#header {
+    height: 200px;
+    width: 100%;
+    display: inline-block;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    margin-top: 18px;
+    float: left;
+}
+
+#menu {
+    list-style-type: none;
+    display: inline;
+}
+
+#menu a {
+    font-size: 30px;
+    color: #8CA3B1;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#title {
+    color: #F5F6FC;
+    font-size: 50px;
+    list-style-type: none;
+}
+
+/** Info/Stats **/
+#info {
+    height: 50vh;
+    background-color: aliceblue;
+    opacity: .5;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+}
+.stats li{
+    color:white;
+    list-style-type: none;
+    background-color: black;
+}
+
+
+}
+.button_reset {
+    font-size: 22px;
+}
+.tower {
+    right: 0;
+    margin-top:-12%;
+    position: absolute;
+}
+
+/*img {*/
+    /*border: 1px solid white;*/
+    /*-webkit-border-radius: 20px;*/
+    /*-moz-border-radius: 20px;*/
+    /*border-radius: 20px;*/
+/*}*/
+
+/** Game Area **/
 #game-area {
     height: 100%;
     width: 1000px;
-    perspective:1000px;
+    perspective: 1000px;
     display: inline-block;
 }
 
@@ -21,7 +90,7 @@ body {
 }
 
 .card:hover, .game_area.hover .card {
-     transform:rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .card_front .card_back {
@@ -41,52 +110,18 @@ body {
     position: absolute;
 }
 
-#header {
-    height: 200px;
-    width: 100%;
-    display: inline-block;
+/** About Me page css **/
+#about {
+    background-image: url("photos/nurburgring.jpg");
+    repeat: no-repeat;
+    background-size: cover;
 }
 
-#logo {
-    width: 200px;
-    height: 200px;
-    margin-top: 18px;
-    float: left;
+.about_pic {
+    height: 300px;
 }
 
-#menu {
-    text-align: center;
-}
-
-#menu a {
-    font-size: 30px;
-    color: #8CA3B1;
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
-#menu p {
-    color: #F5F6FC;
-    font-size: 50px;
-}
-
-#info {
-    height: 50vh;
-    background-color: aliceblue;
-    opacity: .5;
-    width: 20%;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 22px;
-}
-
-.button_reset {
-    font-size: 22px;
-}
-
-img {
-    border: 1px solid white;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+.description {
+    background-color: grey;
+    opacity: 0.8;
 }
