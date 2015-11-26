@@ -89,7 +89,7 @@ body {
     display: inline-block;
 }
 
-.card:active, .game_area.onclick .card {
+.card:active .game_area.onclick .card {
     transform: rotateY(180deg);
 }
 
