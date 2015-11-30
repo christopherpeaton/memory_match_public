@@ -86,8 +86,10 @@ body {
     display: inline-block;
 }
 
-.card.click #game-area.click .card {
+#game-area.click .card {
     transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
 }
 
 .card_front .card_back {
@@ -98,7 +100,7 @@ body {
 
 .card_front {
     z-index: 2;
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
     position: absolute;
 }
 
@@ -108,8 +110,7 @@ body {
 
 /** About Me page css **/
 #about {
-    background-image: url("photos/nurburgring.jpg");
-    background-repeat: no-repeat;
+    background: url("photos/nurburgring.jpg") no-repeat;
     background-size: cover;
 }
 
