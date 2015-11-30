@@ -39,38 +39,28 @@ body {
 }
 
 /** Info/Stats **/
-#info {
-    height: 50vh;
-    background-color: aliceblue;
-    opacity: .5;
-    width: 20%;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 22px;
+.stats {
+    position: absolute;
+    right: 19%;
+    text-align: justify;
+    top: 8%;
 }
-.stats li{
-    color:white;
+
+.stats li {
+    color: white;
     list-style-type: none;
     background-color: black;
 }
 
-
-}
 .button_reset {
     font-size: 22px;
 }
+
 .tower {
     right: 0;
-    margin-top:-12%;
+    margin-top: -12%;
     position: absolute;
 }
-
-/*img {*/
-    /*border: 1px solid white;*/
-    /*-webkit-border-radius: 20px;*/
-    /*-moz-border-radius: 20px;*/
-    /*border-radius: 20px;*/
-/*}*/
 
 /** Game Area **/
 #game-area {
@@ -78,6 +68,13 @@ body {
     width: 1000px;
     perspective: 1000px;
     display: inline-block;
+}
+
+#game-area img {
+    border: 1px solid black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
 
 .card {
@@ -89,9 +86,13 @@ body {
     display: inline-block;
 }
 
-/*.card:hover, .game_area.hover .card {*/
-    /*transform: rotateY(180deg);*/
-/*}*/
+
+#game-area.click .card {
+    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+}
+
 
 .card_front .card_back {
     -webkit-backface-visibility: hidden;
@@ -101,7 +102,7 @@ body {
 
 .card_front {
     z-index: 2;
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
     position: absolute;
 }
 
@@ -111,8 +112,7 @@ body {
 
 /** About Me page css **/
 #about {
-    background-image: url("photos/nurburgring.jpg");
-    repeat: no-repeat;
+    background: url("photos/nurburgring.jpg") no-repeat;
     background-size: cover;
 }
 
