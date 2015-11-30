@@ -89,9 +89,9 @@ body {
     display: inline-block;
 }
 
-.card:hover, .game_area.hover .card {
-    transform: rotateY(180deg);
-}
+/*.card:hover, .game_area.hover .card {*/
+    /*transform: rotateY(180deg);*/
+/*}*/
 
 .card_front .card_back {
     -webkit-backface-visibility: hidden;
@@ -101,7 +101,6 @@ body {
 
 .card_front {
     z-index: 2;
-
     transform: rotateY(180deg);
     position: absolute;
 }
