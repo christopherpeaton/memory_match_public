@@ -39,14 +39,11 @@ body {
 }
 
 /** Info/Stats **/
-#info {
-    height: 50vh;
-    background-color: aliceblue;
-    opacity: .5;
-    width: 20%;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 22px;
+.stats {
+    position: absolute;
+    right: 19%;
+    text-align: justify;
+    top: 8%;
 }
 
 .stats li {
@@ -89,7 +86,7 @@ body {
     display: inline-block;
 }
 
-.card:active .game_area.onclick .card {
+.card.click #game-area.click .card {
     transform: rotateY(180deg);
 }
 
@@ -112,7 +109,7 @@ body {
 /** About Me page css **/
 #about {
     background-image: url("photos/nurburgring.jpg");
-    repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
