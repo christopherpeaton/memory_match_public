@@ -1,30 +1,127 @@
-#game_area {
+/** Game Page css **/
+body {
+    background-image: url("photos/nurburgring.jpg");
+    repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/** Header **/
+#header {
+    height: 200px;
+    width: 100%;
+    display: inline-block;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    margin-top: 18px;
+    float: left;
+}
+
+#menu {
+    list-style-type: none;
+    display: inline;
+}
+
+#menu a {
+    font-size: 30px;
+    color: #8CA3B1;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#title {
+    color: #F5F6FC;
+    font-size: 50px;
+    list-style-type: none;
+}
+
+/** Info/Stats **/
+#info {
+    height: 50vh;
+    background-color: aliceblue;
+    opacity: .5;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+}
+.stats li{
+    color:white;
+    list-style-type: none;
+    background-color: black;
+}
+
+
+}
+.button_reset {
+    font-size: 22px;
+}
+.tower {
+    right: 0;
+    margin-top:-12%;
+    position: absolute;
+}
+
+/*img {*/
+    /*border: 1px solid white;*/
+    /*-webkit-border-radius: 20px;*/
+    /*-moz-border-radius: 20px;*/
+    /*border-radius: 20px;*/
+/*}*/
+
+/** Game Area **/
+#game-area {
     height: 100%;
     width: 1000px;
-    perspective:1000px;
+    perspective: 1000px;
+    display: inline-block;
 }
-#card{
+
+.card {
     height: 200px;
     width: 150px;
-    position:relative;
+    position: relative;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    display:inline-block;
+    display: inline-block;
 }
-#card:hover, #game_area.hover #card {
-    transform:rotateY(180deg);
+
+.card:hover, .game_area.hover .card {
+    transform: rotateY(180deg);
 }
-.card_front_face .card_back_face {
+
+.card_front .card_back {
     -webkit-backface-visibility: hidden;
     top: 0;
     left: 0;
 }
-.card_front_face {
+
+.card_front {
     z-index: 2;
+
     transform: rotateY(180deg);
-    position:absolute;
+    position: absolute;
 }
-.card_back_face {
-    transform: rotateY(0deg);
-    position:absolute;
+
+.card_back {
+    position: absolute;
+}
+
+/** About Me page css **/
+#about {
+    background-image: url("photos/nurburgring.jpg");
+    repeat: no-repeat;
+    background-size: cover;
+}
+
+.about_pic {
+    height: 300px;
+}
+
+.description {
+    background-color: grey;
+    opacity: 0.8;
 }
