@@ -1,7 +1,7 @@
 /** Game Page css **/
 body {
-    background-image: url("photos/nurburgring.jpg");
-    repeat: no-repeat;
+    background: url("photos/nurburgring.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -112,6 +112,12 @@ body {
 #about {
     background: url("photos/nurburgring.jpg") no-repeat;
     background-size: cover;
+}
+
+#title {
+    color: #F5F6FC;
+    font-size: 50px;
+    list-style-type: none;
 }
 
 .about_pic {
