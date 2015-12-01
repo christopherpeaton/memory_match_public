@@ -95,13 +95,13 @@ body {
 
 .animation-back {
     transform: rotateY(-180deg);
-    transition: transform 2s;
+    transition: transform 1s;
     -webkit-backface-visibility: hidden;
 }
 
 .animation-front {
     transform: rotateY(-180deg);
-    transition: transform 2s;
+    transition: transform 1s;
 }
 
 #game-area .card {
