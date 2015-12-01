@@ -94,6 +94,10 @@ function card_clicked(card) {
 }
 var card_animation = function (card) {
     $(card).toggleClass("animation-back");
+    var find_card_front = $(card).parent().find(".card_front")
+    find_card_front.toggleClass("animation-front");
+    //want to see what card actually is in this function.
+    console.log('card is ', card);
 };
 function howAccurate() {
     accuracy = (match_counter / attempts) * 100 + "%";
