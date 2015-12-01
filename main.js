@@ -16,8 +16,7 @@ $(document).ready(function () {
         $(card_container).append(card_front_results).append(card_back());
         $("#game-area").append(card_container)
     }
-
-    card_clicked();
+    //card_clicked("card");
 
 });
 var card_front_photo_array = ["photos/2015-Porsche-918-Spyder.jpg", "photos/56-f100-truck-DSC-0037.jpg", "photos/ae86_levin_hatch_by_bramdc.jpg", "photos/e14592bd933e2191698240c13f74c791.jpg",
@@ -56,11 +55,12 @@ function card_front(frontcardpic) {
 function card_clicked(card) {
     var img_src = $(card).prev().find("img").attr("src");
 
-    $(card).hide().addClass("card_has_been_selected");
+    //$(card).hide().addClass("card_has_been_selected");
 
     if (first_card_clicked == null) {
         console.log("first card clicked");
         first_card_clicked = img_src;
+        card_animation(card);
     } else {
         second_card_clicked = img_src;
         console.log("second card clicked!");
@@ -78,19 +78,23 @@ function card_clicked(card) {
             if (match_counter === total_possible_matches) {
                 alert("You've Won!");
                 games_played += 1;
-                $(".card_has_been_selected").show();
+                //$(".card_has_been_selected").show();
             }
         } else {
             first_card_clicked = null;
             second_card_clicked = null;
             console.log("they don't match");
             waittime = setTimeout(function () {
-                $(".card_has_been_selected").show();
+                //$(".card_has_been_selected").show();
             }, 2000);
+            card_animation(card);
         }
         howAccurate();
     }
 }
+var card_animation = function (card) {
+    $(card).toggleClass("animation-back");
+};
 function howAccurate() {
     accuracy = (match_counter / attempts) * 100 + "%";
     if (accuracy == Infinity) {
@@ -117,5 +121,5 @@ function reset_clicked() {
     console.log("reset stats");
     display_stats();
     console.log("display stats");
-    $(".card_has_been_selected").show();
+    //$(".card_has_been_selected").show();
 }
