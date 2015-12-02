@@ -31,25 +31,25 @@
 
     <ul class="list-group stats">
         <li>
-            <ul class="list-group games_played">
+            <ul class="list-group" id="games_played">
                 <li class="list-group-item">Games Played</li>
                 <li class="list-group-item value"></li>
             </ul>
-            <ul class="list-group attempts attempts">
+            <ul class="list-group" id="attempts">
                 <li class="list-group-item">Attempts</li>
                 <li class="list-group-items value"></li>
             </ul>
-            <ul class="list-group matches">
+            <ul class="list-group" id="matches">
                 <li class="list-group-item">Matches</li>
                 <li class="list-group-item value"></li>
             </ul>
-            <ul class="list-group accuracy">
+            <ul class="list-group" id="accuracy">
                 <li class="list-group-item">Accuracy</li>
                 <li class="list-group-item value"></li>
             </ul>
         </li>
-        <button type="button" onclick="reset_clicked(this)" id="reset" class="button_reset btn-lg">Reset Game</button>
     </ul>
+    <button type="button" class="btn btn-primary btn-lg reset" onclick="reset_clicked(this)">Reset</button>
 </div>
 <!-- Game Area ----------------------------------------------------------- -->
 <div id="game-area">

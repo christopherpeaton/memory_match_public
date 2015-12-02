@@ -52,9 +52,10 @@ body {
     background-color: black;
 }
 
-.button_reset {
-    font-size: 22px;
-}
+button {
+    position: absolute;
+    top: 18%;
+    right: 11%;}
 
 /** michelin tower img **/
 .tower {

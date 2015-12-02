@@ -16,8 +16,7 @@ $(document).ready(function () {
         $(card_container).append(card_front_results).append(card_back());
         $("#game-area").append(card_container)
     }
-    //card_clicked("card");
-
+    display_stats();
 });
 var card_front_photo_array = ["photos/2015-Porsche-918-Spyder.jpg", "photos/56-f100-truck-DSC-0037.jpg", "photos/ae86_levin_hatch_by_bramdc.jpg", "photos/e14592bd933e2191698240c13f74c791.jpg",
     "photos/lowfall_0Vn6_0.jpg", "photos/Mercedes-Benz 190 Cosworth (2).jpg", "photos/morris-mini-1275-01.jpg", "photos/porsche-911-carrera-2.7-rs-04.jpg", "photos/web13.jpg", "photos/2015-Porsche-918-Spyder.jpg", "photos/56-f100-truck-DSC-0037.jpg", "photos/ae86_levin_hatch_by_bramdc.jpg", "photos/e14592bd933e2191698240c13f74c791.jpg",
@@ -55,7 +54,7 @@ function card_front(frontcardpic) {
 function card_clicked(card) {
     var img_src = $(card).prev().find("img").attr("src");
 
-    //$(card).hide().addClass("card_has_been_selected");
+    $(card).addClass("card_has_been_selected");
 
     if (first_card_clicked == null) {
         console.log("first card clicked");
@@ -67,9 +66,9 @@ function card_clicked(card) {
         attempts += 1;
         console.log("attempts", attempts);
         if (first_card_clicked === second_card_clicked) {
-            match_counter += 1;
+            match_counter ++;
             console.log(match_counter);
-            $(".matches .value").text(match_counter);
+            $("#matches .value").text(match_counter);
             $(".card_has_been_selected").toggleClass('match');
             console.log('a match!');
             first_card_clicked = null;
@@ -77,49 +76,54 @@ function card_clicked(card) {
             console.log("total_possible_matches", total_possible_matches);
             if (match_counter === total_possible_matches) {
                 alert("You've Won!");
-                games_played += 1;
+                games_played ++;
                 //$(".card_has_been_selected").show();
             }
         } else {
             first_card_clicked = null;
             second_card_clicked = null;
             console.log("they don't match");
-            waittime = setTimeout(function () {
-                //$(".card_has_been_selected").show();
+            setTimeout(function () {
+                console.log("set timeout");
+                card_animation(".card_has_been_selected");
+                //$(card).removeClass("card_has_been_selected");
             }, 2000);
-            card_animation(card);
+
         }
         howAccurate();
     }
 }
 var card_animation = function (card) {
     $(card).toggleClass("animation-back");
-    var find_card_front = $(card).parent().find(".card_front")
+    var find_card_front = $(card).parent().find(".card_front");
     find_card_front.toggleClass("animation-front");
     //want to see what card actually is in this function.
     console.log('card is ', card);
 };
+
+var accurate = ((match_counter / attempts) * 100 + "%");
 function howAccurate() {
-    accuracy = (match_counter / attempts) * 100 + "%";
-    if (accuracy == Infinity) {
-        $(".accuracy").find(".value").text(100 + "%");
+    var accurate = ((match_counter / attempts) * 100 + "%");
+    if (attempts == Infinity) {
+        $("#accuracy").find(".value").text(100 + "%");
     } else {
-        $(".accuracy").find(".value").text(accuracy);
+        $("#accuracy").find(".value").text(accurate);
     }
 }
 function reset_stats() {
-    accuracy = 0;
-    matches = 0;
+    accurate = 0;
+    match_counter = 0;
     attempts = 0;
 }
 function display_stats() {
-    $(".games-played .value").text(games_played);
-    $(".attempts .value").text(attempts);
-    $(".accuracy .value").text(accuracy);
-    $(".matches .value").text(matches);
+    $("#games_played .value").text(games_played);
+    $("#matches .value").text(match_counter);
+    $("#attempts .value").text(attempts);
+    $("#accuracy .value").text(accurate);
+
 }
-function reset_clicked() {
-    $(".games-played > .value").text(++games_played);
+function reset_clicked(reset) {
+    $("#games_played .value").text(++games_played);
     console.log("games played add 1");
     reset_stats();
     console.log("reset stats");
