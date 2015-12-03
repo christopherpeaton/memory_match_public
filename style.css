@@ -52,9 +52,10 @@ body {
     background-color: black;
 }
 
-.button_reset {
-    font-size: 22px;
-}
+button {
+    position: absolute;
+    top: 18%;
+    right: 11%;}
 
 /** michelin tower img **/
 .tower {
@@ -92,20 +93,27 @@ body {
     perspective: 1000px;
     position: relative;
 }
-
-.animation-back {
-    transform: rotateY(-180deg);
-    transition: transform 1s;
-    -webkit-backface-visibility: hidden;
-}
-
-.animation-front {
-    transform: rotateY(-180deg);
+.card {
+    /*transform: rotateY(-180deg);*/
     transition: transform 1s;
 }
+.match {
+    visibiity: hidden;
+}
+/*.animation-back {*/
+    /*transform: rotateY(-180deg);*/
+    /*transition: transform 1s;*/
+    /*-webkit-backface-visibility: hidden;*/
+/*}*/
+
+/*.animation-front {*/
+    /*transform: rotateY(-180deg);*/
+    /*transition: transform 1s;*/
+/*}*/
 
 #game-area .card {
     transform-style: preserve-3d;
+    transition: transform 1s;
 }
 
 /** About Me page css **/
