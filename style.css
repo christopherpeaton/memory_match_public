@@ -97,16 +97,19 @@ button {
     /*transform: rotateY(-180deg);*/
     transition: transform 1s;
 }
-.animation-back {
-    transform: rotateY(-180deg);
-    transition: transform 1s;
-    -webkit-backface-visibility: hidden;
+.match {
+    visibiity: hidden;
 }
+/*.animation-back {*/
+    /*transform: rotateY(-180deg);*/
+    /*transition: transform 1s;*/
+    /*-webkit-backface-visibility: hidden;*/
+/*}*/
 
-.animation-front {
-    transform: rotateY(-180deg);
-    transition: transform 1s;
-}
+/*.animation-front {*/
+    /*transform: rotateY(-180deg);*/
+    /*transition: transform 1s;*/
+/*}*/
 
 #game-area .card {
     transform-style: preserve-3d;
