@@ -93,7 +93,10 @@ button {
     perspective: 1000px;
     position: relative;
 }
-
+.card {
+    /*transform: rotateY(-180deg);*/
+    transition: transform 1s;
+}
 .animation-back {
     transform: rotateY(-180deg);
     transition: transform 1s;
@@ -107,6 +110,7 @@ button {
 
 #game-area .card {
     transform-style: preserve-3d;
+    transition: transform 1s;
 }
 
 /** About Me page css **/

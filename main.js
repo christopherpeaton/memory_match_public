@@ -100,7 +100,10 @@ function card_clicked(card) {
 }
 
 var card_animation = function (card) {
-
+    if(typeof card == 'undefined'){
+        $('.animation-back').removeClass('animation-back');
+        return;
+    }
     $(card).toggleClass("animation-back");
     var find_card_front = $(card).parent().find(".card_front");
     find_card_front.toggleClass("animation-front");
@@ -136,5 +139,6 @@ function reset_clicked(reset) {
     console.log("reset stats");
     display_stats();
     console.log("display stats");
+    $(".card").find('.card_back').removeClass('animation-back match');
     //$(".card_has_been_selected").show();
 }
