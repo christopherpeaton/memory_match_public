@@ -1,5 +1,7 @@
 var first_card_clicked = null;
 var second_card_clicked = null;
+var first_card_reference = null;
+var second_card_reference = null;
 var total_possible_matches = 9;
 var match_counter = 0;
 var attempts = 0;
@@ -59,9 +61,11 @@ function card_clicked(card) {
     if (first_card_clicked == null) {
         console.log("first card clicked");
         first_card_clicked = img_src;
+        first_card_reference = card;
         card_animation(card);
     } else {
         second_card_clicked = img_src;
+        second_card_reference = card;
         card_animation(card);
         console.log("second card clicked!");
         attempts += 1;
@@ -85,9 +89,10 @@ function card_clicked(card) {
             first_card_clicked = null;
             second_card_clicked = null;
             console.log("they don't match");
-            setTimeout(function () {
+            waittime = setTimeout(function () {
                 console.log("set timeout");
-                card_animation(card);
+                card_animation(first_card_reference);
+                card_animation(second_card_reference);
             }, 2000);
         }
         howAccurate();
@@ -95,6 +100,7 @@ function card_clicked(card) {
 }
 
 var card_animation = function (card) {
+
     $(card).toggleClass("animation-back");
     var find_card_front = $(card).parent().find(".card_front");
     find_card_front.toggleClass("animation-front");
