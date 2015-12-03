@@ -6,6 +6,7 @@ var total_possible_matches = 9;
 var match_counter = 0;
 var attempts = 0;
 var games_played = 0;
+var accurate = 0;
 
 $(document).ready(function () {
     console.log("ready");
@@ -18,7 +19,7 @@ $(document).ready(function () {
         $(card_container).append(card_front_results).append(card_back());
         $("#game-area").append(card_container)
     }
-    display_stats();
+
 });
 var card_front_photo_array = ["photos/2015-Porsche-918-Spyder.jpg", "photos/56-f100-truck-DSC-0037.jpg", "photos/ae86_levin_hatch_by_bramdc.jpg", "photos/e14592bd933e2191698240c13f74c791.jpg",
     "photos/lowfall_0Vn6_0.jpg", "photos/Mercedes-Benz 190 Cosworth (2).jpg", "photos/morris-mini-1275-01.jpg", "photos/porsche-911-carrera-2.7-rs-04.jpg", "photos/web13.jpg", "photos/2015-Porsche-918-Spyder.jpg", "photos/56-f100-truck-DSC-0037.jpg", "photos/ae86_levin_hatch_by_bramdc.jpg", "photos/e14592bd933e2191698240c13f74c791.jpg",
@@ -69,6 +70,7 @@ function card_clicked(card) {
         card_animation(card);
         console.log("second card clicked!");
         attempts += 1;
+        display_stats();
         console.log("attempts", attempts);
         if (first_card_clicked === second_card_clicked) {
             match_counter++;
@@ -111,13 +113,14 @@ var card_animation = function (card) {
     console.log('card is ', card);
 };
 
-var accurate = ((match_counter / attempts) * 100 + "%");
+
 function howAccurate() {
-    var accurate = ((match_counter / attempts) * 100 + "%");
+    accurate = match_counter / attempts;
+    var accurate_percent = (Math.floor((accurate) * 100));
     if (attempts == Infinity) {
         $("#accuracy").find(".value").text(100 + "%");
     } else {
-        $("#accuracy").find(".value").text(accurate);
+        $("#accuracy").find(".value").text(accurate_percent + "%");
     }
 }
 function reset_stats() {
