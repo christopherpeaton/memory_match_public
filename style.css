@@ -1,0 +1,138 @@
+/** Game Page css **/
+body {
+    background: url("photos/nurburgring.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/** Header **/
+#header {
+    height: 200px;
+    width: 100%;
+    display: inline-block;
+}
+/** petrolheads img **/
+#logo {
+    width: 200px;
+    height: 200px;
+    margin-top: 18px;
+    float: left;
+}
+
+#menu {
+    list-style-type: none;
+    display: inline;
+}
+
+#menu a {
+    font-size: 30px;
+    color: #8CA3B1;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#title {
+    color: #F5F6FC;
+    font-size: 50px;
+    list-style-type: none;
+}
+
+/** Info/Stats **/
+.stats {
+    position: absolute;
+    right: 19%;
+    text-align: justify;
+    top: 8%;
+}
+
+.stats li {
+    color: white;
+    list-style-type: none;
+    background-color: black;
+}
+
+button {
+    position: absolute;
+    top: 18%;
+    right: 11%;}
+
+/** michelin tower img **/
+.tower {
+    right: 0;
+    margin-top: -12%;
+    position: absolute;
+}
+
+/** Game Area **/
+#game-area {
+    height: 100%;
+    width: 1000px;
+}
+
+.card_front, .card_back {
+    position: absolute;
+}
+
+/** rounded card edge **/
+#game-area img {
+    border: 1px solid black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#game-area .card {
+    height: 200px;
+    width: 150px;
+    display: inline-block;
+}
+
+/** card animation **/
+#game-area {
+    perspective: 1000px;
+    position: relative;
+}
+.card {
+    /*transform: rotateY(-180deg);*/
+    transition: transform 1s;
+}
+.match {
+    visibiity: hidden;
+}
+/*.animation-back {*/
+    /*transform: rotateY(-180deg);*/
+    /*transition: transform 1s;*/
+    /*-webkit-backface-visibility: hidden;*/
+/*}*/
+
+/*.animation-front {*/
+    /*transform: rotateY(-180deg);*/
+    /*transition: transform 1s;*/
+/*}*/
+
+#game-area .card {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+/** About Me page css **/
+#about {
+    background: url("photos/nurburgring.jpg") no-repeat;
+    background-size: cover;
+}
+
+#title {
+    color: #F5F6FC;
+    font-size: 50px;
+    list-style-type: none;
+}
+
+.about_pic {
+    height: 300px;
+}
+
+.description {
+    background-color: grey;
+    opacity: 0.8;
+}

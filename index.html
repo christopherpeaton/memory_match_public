@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel='stylesheet’ href=’https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src="main.js"></script>
+
+</head>
+<body>
+<!-- Header ------------------------------------------------------------------ -->
+<div id="header">
+    <div id="logo">
+        <img src="photos/944503_354720097988347_450575865_n .jpg" alt="logo">
+    </div>
+    <ul class=list-group" id="menu">
+        <li class=list-group-item" id="title">Match Game</li>
+        <!--<li class=list-group-item"><a href="#settings">Settings</a></li>-->
+        <li class=list-group-item"><a href="about.html">About</a></li>
+    </ul>
+
+</div>
+<!-- Info/Left Nav ------------------------------------------------------- -->
+<div class="info">
+    <div class="tower">
+        <img src="photos/michelin_seven.png" alt="michelin tower">
+    </div>
+
+    <ul class="list-group stats">
+        <li>
+            <ul class="list-group" id="games_played">
+                <li class="list-group-item">Games Played</li>
+                <li class="list-group-item value"></li>
+            </ul>
+            <ul class="list-group" id="attempts">
+                <li class="list-group-item">Attempts</li>
+                <li class="list-group-items value"></li>
+            </ul>
+            <ul class="list-group" id="matches">
+                <li class="list-group-item">Matches</li>
+                <li class="list-group-item value"></li>
+            </ul>
+            <ul class="list-group" id="accuracy">
+                <li class="list-group-item">Accuracy</li>
+                <li class="list-group-item value"></li>
+            </ul>
+        </li>
+    </ul>
+    <button type="button" class="btn btn-primary btn-lg reset" onclick="reset_clicked(this)">Reset</button>
+</div>
+<!-- Game Area ----------------------------------------------------------- -->
+<div id="game-area">
+</div>
+</body>
+</html>
