@@ -92,8 +92,7 @@ function card_clicked(card) {
             }
         } else {
             console.log("card", card);
-            first_card_clicked = null;
-            second_card_clicked = null;
+
             console.log("they don't match");
             waittime = setTimeout(function () {
                 console.log("set timeout");
@@ -101,7 +100,9 @@ function card_clicked(card) {
                 //card_animation(second_card_reference);
                 $(first_card_reference).show();
                 $(second_card_reference).show();
-            }, 2000);
+                first_card_clicked = null;
+                second_card_clicked = null;
+            }, 1500);
         }
         howAccurate();
     }
