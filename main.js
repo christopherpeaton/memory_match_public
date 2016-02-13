@@ -55,6 +55,9 @@ function card_front(frontcardpic) {
 }
 
 function card_clicked(card) {
+    if (second_card_clicked !== null) {
+        return
+    };
     var img_src = $(card).prev().find("img").attr("src");
     $(card).addClass("card_has_been_selected");
     $(card).hide();
