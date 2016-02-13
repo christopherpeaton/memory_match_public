@@ -150,6 +150,8 @@ function reset_clicked(reset) {
     console.log("reset stats");
     display_stats();
     console.log("display stats");
-    $(".card").find('.card_back').removeClass('animation-back match');
-    //$(".card_has_been_selected").show();
+    $(".card").find('.card_back');
+    $(".card_has_been_selected").show();
+    first_card_clicked = null;
+    second_card_clicked = null;
 }
